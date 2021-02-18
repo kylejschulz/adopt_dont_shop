@@ -13,9 +13,9 @@ RSpec.describe 'As a visitor' do
     it "Then I see all Shelters in the system listed in reverse alphabetical order by name" do
         visit "/admin/shelters"
 
-        expect(shelter_4.name).to be_before(shelter_1.name)
-        expect(shelter_1.name).to be_before(shelter_3.name)
-        expect(shelter_3.name).to be_before(shelter_2.name)
+        expect(@shelter_4.name).to be_before(@shelter_1.name)
+        expect(@shelter_1.name).to be_before(@shelter_3.name)
+        expect(@shelter_3.name).to be_before(@shelter_2.name)
     end
   end
 end
