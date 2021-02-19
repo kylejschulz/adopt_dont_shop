@@ -28,7 +28,7 @@ RSpec.describe 'As a visitor' do
       visit "/applications/new"
       fill_in "address", :with => "123 fake st"
       click_button("Submit")
-      save_and_open_page
+      
       expect(current_path).to eq("/applications")
       expect(page).to have_content("You're missing vital information!")
 

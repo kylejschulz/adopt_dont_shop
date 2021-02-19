@@ -8,7 +8,7 @@ RSpec.describe 'As a visitor' do
       @application_2 = create(:application)
       @pet_1 = create(:pet, name: 'Keno')
       @pet_2 = create(:pet, name: 'Fido')
-      @pet_3 = create(:pet, name: 'MR. Fluff')
+      @pet_3 = create(:pet, name: 'Mr. fluff')
       @pet_4 = create(:pet, name: 'Flufftastic')
       @application_1.pets << @pet_1
       @application_1.pets << @pet_2

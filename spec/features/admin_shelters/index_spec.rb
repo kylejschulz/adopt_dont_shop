@@ -12,7 +12,6 @@ RSpec.describe 'As a visitor' do
 
     it "Then I see all Shelters in the system listed in reverse alphabetical order by name" do
         visit "/admin/shelters"
-        save_and_open_page
 
         expect(@shelter_3.name).to appear_before(@shelter_2.name)
         expect(@shelter_2.name).to appear_before(@shelter_4.name)
@@ -20,12 +19,3 @@ RSpec.describe 'As a visitor' do
     end
   end
 end
-
-
-
-
-# Admin Shelters Index
-#
-# As a visitor
-# When I visit the admin shelter index ('/admin/shelters')
-# Then I see all Shelters in the system listed in reverse alphabetical order by name

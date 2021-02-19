@@ -38,7 +38,7 @@ RSpec.describe 'As a visitor' do
 
       fill_in "name", :with => "Shrewsbury Heights"
       click_button("Submit")
-      save_and_open_page
+      
       expect(current_path).to eq("/applications")
       expect(page).to have_content("You're missing vital information!")
     end

@@ -50,7 +50,6 @@ RSpec.describe 'As a visitor' do
           expect(page).to have_no_button("Reject")
           expect(page).to have_no_button("Approve")
         end
-        save_and_open_page
       end
 
       it "And instead I see an indicator next to the pet that they have been rejected" do

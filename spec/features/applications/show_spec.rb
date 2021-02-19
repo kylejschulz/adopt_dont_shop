@@ -17,7 +17,6 @@ RSpec.describe 'As a visitor' do
     it "Then I can see the following:name, full address, name of all pets, application status" do
 
       visit "/applications/#{@application_1.id}"
-      save_and_open_page
 
       expect(current_path).to eq("/applications/#{@application_1.id}")
 
@@ -30,7 +29,6 @@ RSpec.describe 'As a visitor' do
     end
     it "visits another applications page" do
       visit "/applications/#{@application_2.id}"
-      save_and_open_page
 
       expect(current_path).to eq("/applications/#{@application_2.id}")
       expect(page).to have_content("Name: #{@application_2.name}")

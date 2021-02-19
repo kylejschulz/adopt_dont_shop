@@ -45,7 +45,6 @@ RSpec.describe 'As a visitor' do
         click_button("Approve")
         end
         expect(current_path).to eq("/admin/applications/#{@application_1.id}")
-        save_and_open_page
         expect(page).to have_content("status: approved")
         expect(page).to have_no_button("Approve")
         expect(page).to have_no_button("Reject")
@@ -80,7 +79,6 @@ RSpec.describe 'As a visitor' do
         end
         expect(current_path).to eq("/admin/applications/#{@application_1.id}")
 
-        # save_and_open_page
         expect(page).to have_content("status: rejected")
         expect(page).to have_no_button("Approve")
         expect(page).to have_no_button("Reject")

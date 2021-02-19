@@ -31,7 +31,6 @@ RSpec.describe 'As a visitor' do
       expect(current_path).to eq("/applications/#{@application_1.id}")
       expect(page).to have_content("Pending")
       expect(page).to have_no_content("In Progress")
-      save_and_open_page
       expect(page).to have_content("#{@pet_1.name.capitalize}")
       expect(page).to have_content("#{@pet_2.name.capitalize}")
       expect(page).to have_no_content("add pets")
