@@ -21,7 +21,6 @@ RSpec.describe 'As a visitor' do
     describe "For every pet that the application is for, I see a button to approve the application for that specific pet" do
       it "When I click that button" do
         visit "/admin/applications/#{@application_1.id}"
-        save_and_open_page
         expect(page).to have_button("Approve")
         expect(page).to have_button("Reject")
 

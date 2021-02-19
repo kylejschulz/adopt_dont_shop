@@ -33,7 +33,6 @@ RSpec.describe 'As a visitor' do
 
         fill_in "pet_search", :with => "fluff"
         click_button("Submit")
-        save_and_open_page
         expect(current_path).to eq("/applications/#{@application_1.id}")
         expect(page).to have_content("#{@pet_1.name}")
         expect(page).to have_content("#{@pet_2.name}")

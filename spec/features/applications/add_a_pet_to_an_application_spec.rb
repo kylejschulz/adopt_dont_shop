@@ -96,7 +96,6 @@ RSpec.describe 'As a visitor' do
           expect(page).to have_button("Adopt this Pet")
           click_button ("Adopt this Pet")
         end
-        save_and_open_page
         expect(current_path).to eq("/applications/#{@application_1.id}")
         within("#adopted-pet-#{@pet_1.id}") do
           expect(page).to have_content("#{@pet_1.name}")

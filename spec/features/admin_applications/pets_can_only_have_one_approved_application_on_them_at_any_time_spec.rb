@@ -60,7 +60,6 @@ RSpec.describe 'As a visitor' do
         expect(page).to have_button("Reject")
         expect(page).to have_content("still adoptable: false")
         end
-        save_and_open_page
 
         within("#application_pet-#{@application_2.application_pets[1].id}") do
         expect(page).to have_content("#{@pet_2.name.capitalize}")

@@ -1,6 +1,16 @@
+<h3>All Shelters</h3>
+  <ul>
+    <%@shelters.each do |shelter|  %>
+      <li><%= shelter.name  %></li>
+    <% end  %>
+  </ul>
+<br>
 
-<ul>
-  <%@shelters.each do |shelter|  %>
-    <li><%= shelter.name  %></li>
-  <% end  %>
-</ul>
+<h3>Pending Shelters</h3>
+<section id="pending">
+  <ul>
+    <%@shelters.each do |shelter|  %>
+      <li><%= shelter.name  %></li>
+    <% end  %>
+  </ul>
+</section>
